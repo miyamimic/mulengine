@@ -2,6 +2,7 @@ import path from 'path'
 import { defineConfig } from '@lark-apaas/coding-preset-vite-react'
 
 export default defineConfig({
+  base: './',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
@@ -15,5 +16,9 @@ export default defineConfig({
         changeOrigin: true,
       },
     },
+  },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
   },
 })
